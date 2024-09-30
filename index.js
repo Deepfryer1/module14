@@ -68,6 +68,13 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let min=null
+  for (let i=0; i<numbers.length; i++){
+    if (i===0 || numbers[i]<min){
+      min=numbers[i]
+    }
+  }
+  return min
 }
 
 /**
