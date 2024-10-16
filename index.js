@@ -60,6 +60,8 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let mean=getSum(numbers)/getLength(numbers)
+  return mean
 }
 
 /**
@@ -83,6 +85,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let max=null
+  for (let i=0; i<numbers.length; i++){
+    if (i===100 || numbers[i]>max){
+      max=numbers[i]
+    }
+  }
+  return max
 }
 
 /**
@@ -90,6 +99,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
+  return getMax (numbers)- getMin (numbers)
   // TODO
 }
 
@@ -99,7 +109,14 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
-}
+  let evens=[]
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i]%2===0) {
+evens.push(numbers[i])
+    }
+  }
+  return evens
+  }
 
 /**
  * @param {number[]} numbers an array of integers
@@ -107,4 +124,12 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
-}
+  let odds=[]
+  for (let i=0; i<numbers.length; i++){
+    if (numbers[i]%2!=0) {
+odds.push(numbers[i])
+    }
+  }
+  return odds
+  }
+
